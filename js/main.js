@@ -6,6 +6,12 @@ function init() {
         $(this).css('cursor','auto');
         $(this).css('background-color','#FFFFFF');
     });
+
+    $("td").click(function () {
+        var input = $(this).text();
+        var output = $(".display-screen").text() + input;
+        $(".display-screen").text(output);
+    });
 }
 //     var shift = false;
 //     var caps = false;
