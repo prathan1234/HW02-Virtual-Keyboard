@@ -15,10 +15,10 @@ table {
 }
 
 .display-screen {
-    width: 55%;
-    min-height: 250px;
+    width: 52%;
+    min-height: 50px;
     height: 100%;
-    margin: 25px auto 15px auto;
+    margin: 100px auto 15px auto;
     padding: 10px;
     border: 1px solid lightgrey;
     font-size: 18px;

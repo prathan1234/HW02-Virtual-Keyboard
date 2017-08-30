@@ -1,28 +1,42 @@
 function init() {
+    var shift = false;
+
     $("td").hover(function () {
         $(this).css('cursor','pointer');
-        $(this).css('background-color','#EEEEEE');
+        // $(this).css('background-color', '#EEEEEE');
     }, function() {
         $(this).css('cursor','auto');
-        $(this).css('background-color','#FFFFFF');
+        // $(this).css('background-color', '#FFFFFF');
     });
 
     $("td").click(function () {
         var input = $(this).text();
-        if (input == "Enter") {
-            console.log("xxx");
-            input = "\n";
+        if (input == "  Shift") {
+            if (shift == true) {
+                $(this).css('background-color', '#FFFFFF');
+                shift = false;
+            } else {
+                $(this).css('background-color','#DDDDDD');
+                shift = true;
+            }
+        } else {
+            $("td.shift").css('background-color','#FFFFFF');
+            if (shift == true) {
+                input = input.toUpperCase();
+            } else {
+                input = input.toLowerCase();
+            }
+            var output = $(".display-screen").text() + input;
+            $(".display-screen").text(output);
+            shift = false;
         }
-        input = input.toLowerCase();
-        var output = $(".display-screen").text() + input;
-        $(".display-screen").text(output);
+        console.log(shift);
     });
 
     $(".backspace").click(function () {
         var input = $(".display-screen").text();
         var strlen = input.length;
         console.log(input.charAt(strlen-1));
-        input= input.slice(0, strlen-2);
     });
 }
 //     var shift = false;
