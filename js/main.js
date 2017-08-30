@@ -36,13 +36,7 @@ function main() {
         else {
             $("td.shift").css('background-color','#FFFFFF');
 
-            if (shift == true) {
-                input = input.toUpperCase();
-            } else {
-                input = input.toLowerCase();
-            }
-
-            if (caps == true) {
+            if (shift == true || caps == true) {
                 input = input.toUpperCase();
             } else {
                 input = input.toLowerCase();
