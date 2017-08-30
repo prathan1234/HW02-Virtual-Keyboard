@@ -15,12 +15,14 @@ table {
 }
 
 .display-screen {
-    width: 50%;
-    height: 400px;
+    width: 55%;
+    min-height: 250px;
+    height: 100%;
     margin: 25px auto 15px auto;
     padding: 10px;
     border: 1px solid lightgrey;
     font-size: 18px;
     background-color: black;
     color: lawngreen;
+    word-wrap: break-word;
 }

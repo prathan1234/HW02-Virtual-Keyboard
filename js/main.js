@@ -9,8 +9,20 @@ function init() {
 
     $("td").click(function () {
         var input = $(this).text();
+        if (input == "Enter") {
+            console.log("xxx");
+            input = "\n";
+        }
+        input = input.toLowerCase();
         var output = $(".display-screen").text() + input;
         $(".display-screen").text(output);
+    });
+
+    $(".backspace").click(function () {
+        var input = $(".display-screen").text();
+        var strlen = input.length;
+        console.log(input.charAt(strlen-1));
+        input= input.slice(0, strlen-2);
     });
 }
 //     var shift = false;
